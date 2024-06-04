@@ -1,0 +1,32 @@
+class C {
+    public C() {
+        System.out.println("C");
+    }
+    public C(int x) {
+        System.out.println("C " + x);
+    }
+}
+class D extends C {
+    public D() {
+        super(1);
+        System.out.println("D");
+    }
+    public D(int x) {
+        System.out.println("D " + x);
+    }
+}
+class E extends D {
+    public E() {
+        super(1);
+        System.out.println("E");
+    }
+}
+public class T2 {
+    public static void main(String[] args) {
+        new E();
+    }
+}
+
+C
+D 1
+E

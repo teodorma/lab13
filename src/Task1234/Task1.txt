@@ -1,0 +1,20 @@
+class A {
+    public static int a = 0;
+}
+
+class B extends A {
+    public static int a = 5;
+}
+
+public class T1 {
+    public static void main(String[] args) {
+        A a = new B();
+        a.a++;
+        System.out.println(A.a);
+        System.out.println(B.a);
+    }
+}
+
+Output-ul este:
+1
+5
